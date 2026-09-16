@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Complete Booking - TravelEase</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/booking.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html"
+       class="logo">
+        TravelEase
+    </a>
+
+    <div class="nav-actions">
+
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="booking-page">
+
+    <div class="booking-container">
+
+
+        <section>
+
+            <h1>Complete your booking</h1>
+
+
+            <div class="steps">
+
+                <span class="active">
+                    1 Guest details
+                </span>
+
+                <span>
+                    2 Payment
+                </span>
+
+                <span>
+                    3 Confirmation
+                </span>
+
+            </div>
+
+
+            <form id="bookingForm"
+                  class="booking-form">
+
+                <h2>Guest information</h2>
+
+
+                <div class="form-grid">
+
+                    <div>
+
+                        <label>First name</label>
+
+                        <input
+                            id="firstName"
+                            required
+                            type="text">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Last name</label>
+
+                        <input
+                            id="lastName"
+                            required
+                            type="text">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Email</label>
+
+                        <input
+                            id="email"
+                            required
+                            type="email">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Phone</label>
+
+                        <input
+                            id="phone"
+                            required
+                            type="tel">
+
+                    </div>
+
+                </div>
+
+
+                <h2>Stay details</h2>
+
+
+                <div class="form-grid">
+
+                    <div>
+
+                        <label>Check-in</label>
+
+                        <input
+                            id="checkin"
+                            required
+                            type="date">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Check-out</label>
+
+                        <input
+                            id="checkout"
+                            required
+                            type="date">
+
+                    </div>
+
+
+                    <div>
+
+                        <label>Guests</label>
+
+                        <select id="guests">
+
+                            <option>1</option>
+                            <option selected>2</option>
+                            <option>3</option>
+                            <option>4</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <h2>Special requests</h2>
+
+                <textarea
+                    id="requests"
+                    rows="5"
+                    placeholder="Any special requests?">
+                </textarea>
+
+
+                <button
+                    class="primary-button"
+                    type="submit">
+
+                    Continue to payment
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+
+        <aside id="bookingSummary"
+               class="booking-summary">
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<script src="js/booking.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Search Results - TravelEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        TravelEase
+    </a>
+
+    <nav>
+        <a href="index.html">Stays</a>
+        <a href="#">Flights</a>
+        <a href="#">Cars</a>
+    </nav>
+
+    <div class="nav-actions">
+
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+        <a href="login.html">
+            Sign in
+        </a>
+
+    </div>
+
+</header>
+
+
+<main class="search-page">
+
+    <div class="search-summary">
+
+        <h1 id="searchTitle">
+            Search results
+        </h1>
+
+        <p id="searchInfo"></p>
+
+    </div>
+
+
+    <div class="results-layout">
+
+
+        <aside class="filter-box">
+
+            <h3>Filter by</h3>
+
+
+            <h4>Price</h4>
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="3000"
+                    class="priceFilter">
+                Under ₹3,000
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="5000"
+                    class="priceFilter">
+                Under ₹5,000
+            </label>
+
+
+            <h4>Rating</h4>
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="4"
+                    class="ratingFilter">
+                ⭐ 4+
+            </label>
+
+            <label>
+                <input
+                    type="checkbox"
+                    value="4.5"
+                    class="ratingFilter">
+                ⭐ 4.5+
+            </label>
+
+
+            <h4>Amenities</h4>
+
+            <label>
+                <input type="checkbox">
+                Free Wi-Fi
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Swimming Pool
+            </label>
+
+            <label>
+                <input type="checkbox">
+                Parking
+            </label>
+
+        </aside>
+
+
+        <section>
+
+            <div class="sort-bar">
+
+                <span id="resultCount"></span>
+
+                <select id="sortSelect">
+
+                    <option value="recommended">
+                        Recommended
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                    <option value="rating">
+                        Highest Rated
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="results"
+                 class="results-list">
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<script src="js/data.js"></script>
+<script src="js/search.js"></script>
+
+</body>
+
+</html>

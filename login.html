@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login - TravelEase</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/auth.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html"
+       class="logo">
+        TravelEase
+    </a>
+
+</header>
+
+
+<main class="auth-page">
+
+    <form id="loginForm"
+          class="auth-card">
+
+        <h1>Welcome back</h1>
+
+        <p>
+            Sign in to manage your bookings.
+        </p>
+
+
+        <!-- <label>Email</label>
+
+        <input
+            id="loginEmail"
+            type="email"
+            required>
+
+
+        <label>Password</label>
+
+        <input
+            id="loginPassword"
+            type="password"
+            required> -->
+
+<label>Email</label>
+
+<input
+    id="loginEmail"
+    type="email"
+    required
+    placeholder="Enter your Gmail address">
+
+
+<label>Password</label>
+
+<input
+    id="loginPassword"
+    type="password"
+    required
+    minlength="8"
+    placeholder="Enter your password">
+        <button type="submit"
+                class="primary-button">
+
+            Sign in
+
+        </button>
+
+
+        <p>
+            Don't have an account?
+
+            <a href="register.html">
+                Register
+            </a>
+
+        </p>
+
+    </form>
+
+</main>
+
+
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

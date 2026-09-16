@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>TravelEase - Travel Booking</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+        <i class="fa-solid fa-plane-departure"></i>
+        TravelEase
+    </a>
+
+    <nav>
+        <a class="active" href="index.html">Stays</a>
+        <a href="#">Flights</a>
+        <a href="#">Cars</a>
+        <a href="#">Attractions</a>
+    </nav>
+
+    <!-- <div class="nav-actions">
+
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+        <a href="login.html">
+            Sign in
+        </a>
+
+        <a class="nav-register"
+           href="register.html">
+            Register
+        </a>
+
+    </div> -->
+
+
+    <div class="nav-actions" id="navActions">
+
+    <a href="my-bookings.html">
+        My Bookings
+    </a>
+
+    <a href="login.html">
+        Sign in
+    </a>
+
+    <a class="nav-register"
+       href="register.html">
+        Register
+    </a>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Find your next stay</h1>
+
+        <p>
+            Search hotels, resorts and apartments for your next trip.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <div class="search-field">
+
+            <i class="fa-solid fa-location-dot"></i>
+
+            <div>
+
+                <label>Destination</label>
+
+                <input
+                    id="destination"
+                    type="text"
+                    placeholder="Where are you going?"
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <div>
+
+                <label>Check-in</label>
+
+                <input id="checkin"
+                       type="date">
+
+            </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <i class="fa-regular fa-calendar"></i>
+
+            <div>
+
+                <label>Check-out</label>
+
+                <input id="checkout"
+                       type="date">
+
+            </div>
+
+        </div>
+
+
+        <div class="search-field">
+
+            <i class="fa-solid fa-user-group"></i>
+
+            <div>
+
+                <label>Guests</label>
+
+                <select id="guests">
+
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5 Guests</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <button class="search-button"
+                onclick="performSearch()">
+
+            Search
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <h2>Popular destinations</h2>
+
+    <p class="section-subtitle">
+        Explore popular destinations in India
+    </p>
+
+
+    <div class="destination-grid">
+
+        <div class="destination-card"
+             onclick="destinationSearch('New Delhi')">
+
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80">
+
+            <div>
+                <h3>New Delhi</h3>
+                <p>India</p>
+            </div>
+
+        </div>
+
+
+        <div class="destination-card"
+             onclick="destinationSearch('Mumbai')">
+
+            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=800&q=80">
+
+            <div>
+                <h3>Mumbai</h3>
+                <p>India</p>
+            </div>
+
+        </div>
+
+
+        <div class="destination-card"
+             onclick="destinationSearch('Goa')">
+
+            <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80">
+
+            <div>
+                <h3>Goa</h3>
+                <p>India</p>
+            </div>
+
+        </div>
+
+
+        <div class="destination-card"
+             onclick="destinationSearch('Jaipur')">
+
+            <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80">
+
+            <div>
+                <h3>Jaipur</h3>
+                <p>India</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="container">
+
+    <h2>Popular stays</h2>
+
+    <p class="section-subtitle">
+        Highly rated places to stay
+    </p>
+
+    <div id="homeHotels"
+         class="hotel-grid">
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <h2>TravelEase</h2>
+
+            <p>
+                Find and book your perfect stay.
+            </p>
+        </div>
+
+        <div>
+            <h3>Explore</h3>
+            <a href="#">Hotels</a>
+            <a href="#">Flights</a>
+            <a href="#">Cars</a>
+        </div>
+
+        <div>
+            <h3>Support</h3>
+            <a href="#">Help Center</a>
+            <a href="#">Contact</a>
+            <a href="#">Privacy</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 TravelEase
+    </div>
+
+</footer>
+
+<script>
+
+    const loggedIn =
+        localStorage.getItem("loggedIn");
+
+    const userName =
+        localStorage.getItem("userName");
+
+    const navActions =
+        document.getElementById("navActions");
+
+
+    if (loggedIn === "true" && userName) {
+
+        navActions.innerHTML = `
+
+            <span class="welcome-user">
+                Hi, ${userName}
+            </span>
+
+            <a href="my-bookings.html">
+                My Bookings
+            </a>
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button">
+                Logout
+            </button>
+
+        `;
+
+
+        document
+            .getElementById("logoutButton")
+            .addEventListener(
+                "click",
+                function() {
+
+                    localStorage.removeItem(
+                        "loggedIn"
+                    );
+
+                    localStorage.removeItem(
+                        "userEmail"
+                    );
+
+                    localStorage.removeItem(
+                        "userName"
+                    );
+
+                    window.location.href =
+                        "index.html";
+
+                }
+            );
+
+    }
+
+</script>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register - TravelEase</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+    <link rel="stylesheet"
+          href="css/auth.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html"
+       class="logo">
+        TravelEase
+    </a>
+
+</header>
+
+
+<main class="auth-page">
+
+    <form id="registerForm"
+          class="auth-card">
+
+        <h1>Create account</h1>
+
+        <p>
+            Join TravelEase today.
+        </p>
+
+
+        <label>Full name</label>
+
+        <input
+            id="registerName"
+            type="text"
+            required>
+
+
+        <label>Email</label>
+
+        <input
+            id="registerEmail"
+            type="email"
+            required>
+
+
+        <label>Password</label>
+
+        <!-- <input
+            id="registerPassword"
+            type="password"
+            required
+            minlength="6"> -->
+
+<input 
+    id="registerPassword" 
+    type="password" 
+    required
+    minlength="8"
+    placeholder="At least 8 characters">
+        <button
+            class="primary-button"
+            type="submit">
+
+            Create account
+
+        </button>
+
+
+        <p>
+            Already have an account?
+
+            <a href="login.html">
+                Sign in
+            </a>
+
+        </p>
+
+    </form>
+
+</main>
+
+
+<script src="js/auth.js"></script>
+
+</body>
+
+</html>

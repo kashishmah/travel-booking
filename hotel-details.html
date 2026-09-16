@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Hotel Details - TravelEase</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/hotel.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <a href="index.html"
+       class="logo">
+        TravelEase
+    </a>
+
+    <nav>
+        <a href="index.html">Stays</a>
+        <a href="#">Flights</a>
+        <a href="#">Cars</a>
+    </nav>
+
+    <div class="nav-actions">
+        <a href="my-bookings.html">
+            My Bookings
+        </a>
+
+        <a href="login.html">
+            Sign in
+        </a>
+    </div>
+
+</header>
+
+
+<main class="hotel-page">
+
+    <div class="breadcrumb">
+        Home › Hotels › <span id="breadcrumbName"></span>
+    </div>
+
+
+    <section class="hotel-title">
+
+        <div>
+
+            <h1 id="hotelName"></h1>
+
+            <div class="rating-line">
+
+                <span id="hotelRating"
+                      class="rating">
+                </span>
+
+                <span id="hotelReviews"></span>
+
+            </div>
+
+            <p>
+                📍 <span id="hotelLocation"></span>
+            </p>
+
+        </div>
+
+
+        <button
+            id="favoriteButton"
+            class="favorite-button">
+
+            ♡
+
+        </button>
+
+    </section>
+
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery">
+
+        <div class="main-image">
+
+            <img id="mainHotelImage">
+
+        </div>
+
+
+        <div id="thumbnailContainer"
+             class="thumbnail-grid">
+        </div>
+
+    </section>
+
+
+
+    <!-- DETAILS -->
+
+    <section class="hotel-content">
+
+        <div class="hotel-description">
+
+            <h2>About this property</h2>
+
+            <p id="hotelDescription"></p>
+
+
+            <h2>Amenities</h2>
+
+            <div id="amenities"
+                 class="amenities-large">
+            </div>
+
+        </div>
+
+
+        <aside class="quick-booking">
+
+            <h3>Your stay</h3>
+
+            <p>
+                Select a room below to continue.
+            </p>
+
+            <strong id="startingPrice"></strong>
+
+            <button
+                onclick="scrollToRooms()">
+                See rooms
+            </button>
+
+        </aside>
+
+    </section>
+
+
+
+    <!-- ROOMS -->
+
+    <section id="rooms"
+             class="rooms-section">
+
+        <h2>Rooms & availability</h2>
+
+        <div id="roomsContainer"></div>
+
+    </section>
+
+
+
+    <!-- MAP -->
+
+    <section class="location-section">
+
+        <h2>Location</h2>
+
+        <p id="mapAddress"></p>
+
+        <div class="map-container">
+
+            <iframe
+                id="mapFrame"
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- REVIEWS -->
+
+    <section class="reviews-section">
+
+        <h2>Guest reviews</h2>
+
+        <div class="review-summary">
+
+            <strong id="reviewRating"></strong>
+
+            <span>
+                Based on guest reviews
+            </span>
+
+        </div>
+
+
+        <div id="reviewsContainer"
+             class="reviews-container">
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="js/data.js"></script>
+<script src="js/hotel.js"></script>
+
+</body>
+
+</html>

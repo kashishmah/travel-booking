@@ -1,0 +1,269 @@
+.hotel-page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.breadcrumb {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.hotel-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.hotel-title h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.rating-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.favorite-button {
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    height: 450px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.thumbnail-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.hotel-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+.hotel-description h2,
+.rooms-section h2,
+.location-section h2,
+.reviews-section h2 {
+    margin: 30px 0 15px;
+}
+
+.hotel-description p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.amenities-large {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.amenity {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+}
+
+.quick-booking {
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 10px;
+    height: fit-content;
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.quick-booking strong {
+    display: block;
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.quick-booking button,
+.room-price button {
+    background: #0071c2;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.rooms-section {
+    margin-top: 50px;
+}
+
+.room-card {
+    display: grid;
+    grid-template-columns: 220px 1fr 180px;
+    gap: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.room-image {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.room-details h3 {
+    color: #003b95;
+    margin-bottom: 10px;
+}
+
+.room-features {
+    line-height: 1.8;
+    color: #555;
+    margin-top: 15px;
+}
+
+.room-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 7px;
+}
+
+.room-price strong {
+    font-size: 24px;
+}
+
+.available {
+    color: #008a00;
+    font-weight: bold;
+}
+
+.unavailable {
+    color: red;
+}
+
+.map-container {
+    height: 400px;
+    margin-top: 20px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+.review-summary {
+    background: #f5f8fc;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.review-summary strong {
+    font-size: 35px;
+    background: #003b95;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.review-card {
+    border-bottom: 1px solid #ddd;
+    padding: 25px 0;
+}
+
+.review-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    background: #003b95;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.review-user small {
+    display: block;
+    color: #777;
+}
+
+.review-stars {
+    margin: 10px 0;
+}
+
+@media(max-width:800px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .main-image img {
+        height: 300px;
+    }
+
+    .thumbnail-grid {
+        height: 180px;
+    }
+
+    .hotel-content {
+        grid-template-columns: 1fr;
+    }
+
+    .room-card {
+        grid-template-columns: 1fr;
+    }
+
+    .room-image {
+        width: 100%;
+    }
+
+    .room-price {
+        align-items: flex-start;
+    }
+}
